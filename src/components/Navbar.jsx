@@ -28,14 +28,14 @@ function Navbar() {
       <div className={`links ${open ? "anim" : ""}`}>
         <span className="linksText">
           <Link to="about" spy={true} smooth={true}>
-            <span className="icon">
+            <span className="icons">
               <FaQuestion />
             </span>
             About
           </Link>
         </span>
         <span className="linksText">
-          <span className="icon">
+          <span className="icons">
             <FaHome />
           </span>
           Home
