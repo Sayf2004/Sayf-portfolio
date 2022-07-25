@@ -1,6 +1,17 @@
 import "./first.css";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 function First() {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
+
   return (
     <div className="first">
       {/* Left part */}
@@ -27,8 +38,30 @@ function First() {
 
       {/* Social */}
       <div className="social">
-        <span className="icon">FB</span>
-        <span className="icon">Insta</span>
+        <span
+          className="icon"
+          data-aos-delay="400"
+          data-aos="fade-in"
+          data-aos-duration="1000"
+        >
+          <FaFacebook size={24} />
+        </span>
+        <span
+          data-aos-delay="800"
+          data-aos="fade-in"
+          data-aos-duration="1000"
+          className="icon"
+        >
+          <FaInstagram size={24} />
+        </span>
+        <span
+          data-aos-delay="1200"
+          data-aos="fade-in"
+          data-aos-duration="1000"
+          className="icon"
+        >
+          <FaLinkedin size={24} />
+        </span>
       </div>
     </div>
   );

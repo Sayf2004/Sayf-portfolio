@@ -31,3 +31,13 @@ img {
   flex-direction: column;
   margin-right: 15px;
 }
+
+.icon {
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.5s all ease-in-out;
+}
+
+.icon:hover {
+  color: rgb(202, 201, 201);
+}
