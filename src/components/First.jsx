@@ -15,7 +15,7 @@ function First() {
   return (
     <div className="first">
       {/* Left part */}
-      <div className="left">
+      <div className="left up">
         <div className="description">
           <h2 className="desTitle">Hello There,</h2>
           <p className="desPar">
@@ -30,7 +30,7 @@ function First() {
       </div>
 
       {/* Right Part */}
-      <div className="right">
+      <div className="right down">
         <div className="img">
           <img src="https://i.imgur.com/WW7r0p1.jpg" alt="Sayf's Pic" />
         </div>
@@ -43,6 +43,8 @@ function First() {
           data-aos-delay="400"
           data-aos="fade-in"
           data-aos-duration="1000"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-mirror="true"
         >
           <FaFacebook size={24} />
         </span>
@@ -50,6 +52,8 @@ function First() {
           data-aos-delay="800"
           data-aos="fade-in"
           data-aos-duration="1000"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-mirror="true"
           className="icon"
         >
           <FaInstagram size={24} />
@@ -58,6 +62,8 @@ function First() {
           data-aos-delay="1200"
           data-aos="fade-in"
           data-aos-duration="1000"
+          data-aos-anchor-placement="bottom-bottom"
+          data-aos-mirror="true"
           className="icon"
         >
           <FaLinkedin size={24} />

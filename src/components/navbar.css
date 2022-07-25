@@ -8,13 +8,14 @@
   justify-content: space-around;
 }
 
+.mobile {
+  margin-top: 10px;
+}
+
 .logo {
   display: flex;
   flex: 1;
   padding-left: 75px;
-}
-
-.text {
   cursor: pointer;
   font-size: 20px;
 }
@@ -66,4 +67,66 @@
   background-color: #000;
   color: #fff;
   border: white 2px solid;
+}
+
+.btn {
+  display: none;
+}
+.icon {
+  display: none;
+  opacity: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .links {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 0;
+    opacity: 0;
+  }
+  .linksButton,
+  .linksText {
+    margin: 0;
+    margin-top: 15px;
+  }
+
+  .mobile {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+  }
+
+  .navbar {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    padding: 0;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .anim {
+    transition: all ease-in 0.5s;
+    height: auto;
+    opacity: 1;
+  }
+  .icon {
+    transition: all ease-in-out 0.5s;
+    display: inline;
+    opacity: 1;
+  }
 }

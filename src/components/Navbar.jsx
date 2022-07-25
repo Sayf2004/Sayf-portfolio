@@ -1,26 +1,44 @@
+import { useState } from "react";
+import { FaBars, FaHome, FaQuestion } from "react-icons/fa";
+import { Link } from "react-scroll";
 import "./navbar.css";
-import { useRef } from "react";
 
 function Navbar() {
-  const ref = useRef(null);
+  const [open, setOpen] = useState(false);
 
   const handleClick = () => {
-    ref.current?.scrollIntoView({ behavior: "smooth" });
+    setOpen(!open);
   };
+
   return (
     <div className="navbar">
       {/* Logo */}
-      <div className="logo">
-        <div className="text">
+      <div className="mobile">
+        <div className="logo">
           <h2 className="logoText">Sayf Ketata</h2>
         </div>
+        <div className="btn">
+          <span className="bars">
+            <FaBars size={22} onClick={handleClick} />
+          </span>
+        </div>
       </div>
-
       {/* Links */}
-      <div className="links">
-        <span className="linksText">Home</span>
-        <span className="linksText" onClick={handleClick}>
-          About
+
+      <div className={`links ${open ? "anim" : ""}`}>
+        <span className="linksText">
+          <Link to="about" spy={true} smooth={true}>
+            <span className="icon">
+              <FaQuestion />
+            </span>
+            About
+          </Link>
+        </span>
+        <span className="linksText">
+          <span className="icon">
+            <FaHome />
+          </span>
+          Home
         </span>
         <button className="linksButton">Contact</button>
       </div>

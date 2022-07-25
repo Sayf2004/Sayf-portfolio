@@ -41,3 +41,42 @@ img {
 .icon:hover {
   color: rgb(202, 201, 201);
 }
+
+@media only screen and (max-width: 768px) {
+  .social {
+    margin: 0;
+    margin-top: 10px;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+  }
+
+  .icon {
+    margin-right: 5px;
+  }
+
+  .first {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 75px;
+  }
+  .up {
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 80%;
+  }
+
+  .down {
+    margin: 0;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  img {
+    width: 250px;
+  }
+}
