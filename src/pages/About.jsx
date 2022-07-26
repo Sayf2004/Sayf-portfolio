@@ -3,7 +3,7 @@ import "./about.css";
 function About() {
   return (
     <div id="about" className="about">
-      About
+      Prototype this shit before
     </div>
   );
 }
