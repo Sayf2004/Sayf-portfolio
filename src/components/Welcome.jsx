@@ -1,3 +1,4 @@
+import { BsArrowUpRight } from "react-icons/bs";
 import styled from "styled-components";
 import { device } from "../device";
 
@@ -28,6 +29,19 @@ const TextBot = styled.span`
   font-size: 22px;
 `;
 
+const Div = styled.div`
+  display: flex;
+`;
+
+const Button = styled.button`
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  border: none;
+`;
+
 function Welcome() {
   return (
     <Wrapper>
@@ -40,6 +54,11 @@ function Welcome() {
           Raising Senior, <b>Pioneer Highschool of Sfax</b>
         </TextBot>
       </Container>
+      <Div>
+        <Button>
+          Contact <BsArrowUpRight />
+        </Button>
+      </Div>
     </Wrapper>
   );
 }

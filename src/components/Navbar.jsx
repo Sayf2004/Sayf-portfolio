@@ -18,7 +18,7 @@ const Container = styled.div`
 const Gray = styled.div`
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 189vh;
   background-color: #5050506f;
   transition: all 0.1s ease-in-out;
   visibility: ${(props) => (props.gray ? "visible" : "hidden")};
@@ -42,7 +42,7 @@ const Links = styled.div`
   display: flex;
   gap: 60px;
   width: 40%;
-  transition: all 1s ease-in-out;
+  transition: all 0.7s ease-in-out;
   @media ${device.tablet} {
     position: absolute;
     align-items: center;
@@ -50,7 +50,7 @@ const Links = styled.div`
     gap: 15px;
     top: -140%;
     width: 30%;
-    height: 100vh;
+    height: 115vh;
     flex-direction: column;
     background-color: white;
     z-index: 1;
