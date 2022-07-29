@@ -12,7 +12,6 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: aliceblue;
 `;
 
 const Gray = styled.div`
@@ -42,15 +41,16 @@ const Links = styled.div`
   display: flex;
   gap: 60px;
   width: 40%;
-  transition: all 0.7s ease-in-out;
+  transition: all 0.5s ease-in-out;
   @media ${device.tablet} {
     position: absolute;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     gap: 15px;
-    top: -140%;
+    top: 0;
     width: 30%;
-    height: 115vh;
+    height: 100vh;
+    padding-top: 25%;
     flex-direction: column;
     background-color: white;
     z-index: 1;
@@ -59,9 +59,12 @@ const Links = styled.div`
 `;
 
 const Par = styled.span`
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   cursor: pointer;
+  @media ${device.tablet} {
+    font-size: 20px;
+  }
 `;
 
 const Bars = styled.div`

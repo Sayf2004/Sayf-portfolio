@@ -1,12 +1,19 @@
-import React from "react";
 import Navbar from "../components/Navbar";
 import Welcome from "../components/Welcome";
+import styled from "styled-components";
+
+const First = styled.div`
+  height: 100vh;
+  overflow-y: hidden;
+`;
 
 function Home() {
   return (
     <>
-      <Navbar />
-      <Welcome />
+      <First>
+        <Navbar />
+        <Welcome />
+      </First>
     </>
   );
 }

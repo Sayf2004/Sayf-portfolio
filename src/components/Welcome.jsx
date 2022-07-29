@@ -3,10 +3,13 @@ import styled from "styled-components";
 import { device } from "../device";
 
 const Wrapper = styled.div`
-  height: calc(100vh - 80px);
+  height: auto;
   display: flex;
   flex-direction: column;
   padding: 5% 10%;
+  @media ${device.tablet} {
+    padding: 15% 10%;
+  }
 `;
 
 const Container = styled.div``;
@@ -15,21 +18,35 @@ const TextUp = styled.h2`
   font-weight: 400;
   font-size: 32px;
   margin-bottom: -10px;
+  @media ${device.tablet} {
+    font-size: 24px;
+  }
 `;
 const TextMid = styled.h2`
   font-weight: 400;
   font-size: 32px;
+  @media ${device.tablet} {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
 `;
 const TextBold = styled.span`
   color: #007fef;
   font-weight: 700;
   font-size: 48px;
+  @media ${device.tablet} {
+    font-size: 24px;
+  }
 `;
 const TextBot = styled.span`
   font-size: 22px;
+  @media ${device.tablet} {
+    font-size: 16px;
+  }
 `;
 
 const Div = styled.div`
+  margin-top: 40px;
   display: flex;
 `;
 
@@ -38,8 +55,23 @@ const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 7px;
+  padding: 10px;
   border: none;
+  color: white;
+  background-color: black;
+  border: 2px white solid;
+  transition: 0.6s all ease-in-out;
+  font-size: 16px;
+  border-radius: 15px;
+  &:hover {
+    border: 2px black solid;
+    color: black;
+    background-color: white;
+  }
+`;
+
+const ButtonText = styled.span`
+  margin-right: 7px;
 `;
 
 function Welcome() {
@@ -51,12 +83,12 @@ function Welcome() {
           <TextBold>A High School Student</TextBold> based in Sfax,Tunisia
         </TextMid>
         <TextBot>
-          Raising Senior, <b>Pioneer Highschool of Sfax</b>
+          A Raising Senior, <b>Pioneer Highschool of Sfax</b>
         </TextBot>
       </Container>
       <Div>
         <Button>
-          Contact <BsArrowUpRight />
+          <ButtonText>Contact</ButtonText> <BsArrowUpRight />
         </Button>
       </Div>
     </Wrapper>
