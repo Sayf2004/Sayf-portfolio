@@ -5,6 +5,7 @@ import styled from "styled-components";
 const First = styled.div`
   height: 100vh;
   overflow-y: hidden;
+  overflow-x: hidden;
 `;
 
 function Home() {

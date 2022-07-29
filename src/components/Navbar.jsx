@@ -16,11 +16,13 @@ const Container = styled.div`
 
 const Gray = styled.div`
   position: absolute;
-  width: 100%;
-  height: 189vh;
-  background-color: #5050506f;
   transition: all 0.1s ease-in-out;
-  visibility: ${(props) => (props.gray ? "visible" : "hidden")};
+  @media ${device.tablet} {
+    width: 100%;
+    height: 189vh;
+    background-color: #5050506f;
+    visibility: ${(props) => (props.gray ? "visible" : "hidden")};
+  }
 `;
 
 const LogoContainer = styled.div`
@@ -41,7 +43,7 @@ const Links = styled.div`
   display: flex;
   gap: 60px;
   width: 40%;
-  transition: all 0.5s ease-in-out;
+  transition: left 0.5s ease-in-out;
   @media ${device.tablet} {
     position: absolute;
     align-items: center;
@@ -55,6 +57,9 @@ const Links = styled.div`
     background-color: white;
     z-index: 1;
     left: ${(props) => (props.slide ? "70%" : "100%")};
+  }
+  @media ${device.mobileL} {
+    padding-top: 50%;
   }
 `;
 
@@ -97,7 +102,9 @@ function Navbar() {
         <FaBars />
       </Bars>
       <Links slide={visible}>
-        <Par>About</Par>
+        <Link spy={true} smooth={true} to="about">
+          <Par onClick={handleClick}>About</Par>
+        </Link>
         <Par>Work</Par>
         <Par>Contact</Par>
       </Links>

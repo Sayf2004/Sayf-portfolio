@@ -1,18 +1,24 @@
 import { BsArrowUpRight } from "react-icons/bs";
+import { useEffect } from "react";
 import styled from "styled-components";
 import { device } from "../device";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Wrapper = styled.div`
   height: auto;
   display: flex;
   flex-direction: column;
-  padding: 5% 10%;
+  padding: 8% 10%;
   @media ${device.tablet} {
     padding: 15% 10%;
   }
 `;
 
-const Container = styled.div``;
+const Container = styled.div`
+  position: relative;
+  z-index: -1;
+`;
 
 const TextUp = styled.h2`
   font-weight: 400;
@@ -75,15 +81,24 @@ const ButtonText = styled.span`
 `;
 
 function Welcome() {
+  useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
     <Wrapper>
-      <Container>
+      <Container
+        data-aos-delay="0"
+        data-aos="slide-down"
+        data-aos-duration="2000"
+        data-aos-mirror="false"
+      >
         <TextUp>Hi, I'm Sayf Ketata.</TextUp>
         <TextMid>
           <TextBold>A High School Student</TextBold> based in Sfax,Tunisia
         </TextMid>
         <TextBot>
-          A Raising Senior, <b>Pioneer Highschool of Sfax</b>
+          A Rising Senior, <b>Pioneer Highschool of Sfax</b>
         </TextBot>
       </Container>
       <Div>
