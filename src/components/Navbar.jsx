@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { device } from "../device";
 import { useState } from "react";
-import { FaBars } from "react-icons/fa";
 import { Link } from "react-scroll";
 
 const Container = styled.div`
@@ -60,6 +59,8 @@ const Links = styled.div`
   }
   @media ${device.mobileL} {
     padding-top: 50%;
+    width: 40%;
+    left: ${(props) => (props.slide ? "60%" : "100%")};
   }
 `;
 
@@ -73,16 +74,62 @@ const Par = styled.span`
 `;
 
 const Bars = styled.div`
-  width: 29%;
+  width: 30%;
   display: none;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
   @media ${device.tablet} {
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: ${(props) => (props.ani ? "rotate(90deg)" : "")};
+    transition: all 0.5s ease-in-out;
     display: flex;
+    height: 100%;
     position: relative;
     z-index: 2;
   }
+  @media ${device.mobileL} {
+    width: 40%;
+  }
+`;
+
+const Button = styled.div`
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+`;
+
+const SpanTop = styled.div`
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transform: ${(props) =>
+    props.ani ? "rotate(45deg) translateX(6px) translateY(6px)" : ""};
+  transition: all 0.5s ease-in-out;
+`;
+const SpanMid = styled.div`
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  visibility: ${(props) => (props.ani ? "hidden" : "visible")};
+  top: ${(props) => (props.ani ? "0" : "5px")};
+`;
+
+const SpanBot = styled.div`
+  position: absolute;
+  top: ${(props) => (props.ani ? "0" : "10px")};
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  transform: ${(props) =>
+    props.ani ? "rotate(-45deg) translateX(-6px) translateY(6px)" : ""};
+  transition: all 0.5s ease-in-out;
 `;
 
 function Navbar() {
@@ -99,7 +146,12 @@ function Navbar() {
         <Logo>Sayf Ketata</Logo>
       </LogoContainer>
       <Bars onClick={handleClick}>
-        <FaBars />
+        {/* <FaBars /> */}
+        <Button ani={visible}>
+          <SpanTop ani={visible}></SpanTop>
+          <SpanMid ani={visible}></SpanMid>
+          <SpanBot ani={visible}></SpanBot>
+        </Button>
       </Bars>
       <Links slide={visible}>
         <Link spy={true} smooth={true} to="about">

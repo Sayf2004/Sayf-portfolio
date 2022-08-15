@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import Welcome from "../components/Welcome";
 import styled from "styled-components";
+import Image from "../components/Image";
 
 const First = styled.div`
   height: 100vh;
@@ -14,6 +15,7 @@ function Home() {
       <First>
         <Navbar />
         <Welcome />
+        <Image />
       </First>
     </>
   );

@@ -23,13 +23,57 @@ const Title = styled.div`
 const Bold = styled.span`
   font-weight: 800;
 `;
-const Right = styled.div`
-  width: 49.9%;
-`;
 const Desc1 = styled.div`
   margin-bottom: 25px;
 `;
 const Desc2 = styled.div``;
+
+const Right = styled.div`
+  position: relative;
+  display: flex;
+  width: 49.9%;
+  @media ${device.tablet} {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 40vh;
+    background-color: black;
+  }
+`;
+
+const Card1 = styled.div`
+  position: absolute;
+  z-index: 0;
+  margin-left: 165px;
+  width: 225px;
+  height: 300px;
+  background-color: #a6d5ff;
+`;
+
+const Card2 = styled.div`
+  position: absolute;
+  margin-top: 40px;
+  margin-left: 130px;
+  z-index: 1;
+  width: 225px;
+  height: 300px;
+  background-color: #8ac8ff;
+`;
+const Card3 = styled.div`
+  position: absolute;
+  margin-top: 80px;
+  margin-left: 95px;
+  z-index: 2;
+  width: 225px;
+  height: 300px;
+`;
+
+const Img = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
 
 function Info() {
   return (
@@ -53,7 +97,13 @@ function Info() {
           nunc. Mi ut etiam vel.
         </Desc2>
       </Left>
-      <Right></Right>
+      <Right>
+        <Card1></Card1>
+        <Card2></Card2>
+        <Card3>
+          <Img src="https://i.imgur.com/As1PcHa.jpg" alt="Me Pic" />
+        </Card3>
+      </Right>
     </Container>
   );
 }

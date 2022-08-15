@@ -1,5 +1,6 @@
 import Info from "../components/Info";
 import styled from "styled-components";
+import { device } from "../device";
 
 const Container = styled.div`
   width: 100%;
