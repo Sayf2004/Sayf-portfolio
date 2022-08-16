@@ -6,6 +6,7 @@ const Div = styled.div`
   display: none;
   align-items: center;
   justify-content: center;
+  margin-top: 40px;
   @media ${device.mobileL} {
     display: flex;
   }

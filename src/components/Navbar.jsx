@@ -18,7 +18,7 @@ const Gray = styled.div`
   transition: all 0.1s ease-in-out;
   @media ${device.tablet} {
     width: 100%;
-    height: 189vh;
+    height: 199vh;
     background-color: #5050506f;
     visibility: ${(props) => (props.gray ? "visible" : "hidden")};
   }
@@ -77,14 +77,14 @@ const Bars = styled.div`
   width: 30%;
   display: none;
   @media ${device.tablet} {
-    justify-content: center;
-    align-items: center;
+    margin-top: 7px;
     cursor: pointer;
     transform: ${(props) => (props.ani ? "rotate(90deg)" : "")};
     transition: all 0.5s ease-in-out;
     display: flex;
+    align-items: center;
+    justify-content: center;
     height: 100%;
-    position: relative;
     z-index: 2;
   }
   @media ${device.mobileL} {
@@ -93,12 +93,10 @@ const Bars = styled.div`
 `;
 
 const Button = styled.div`
+  position: relative;
   cursor: pointer;
   width: 20px;
   height: 20px;
-  position: relative;
-  display: flex;
-  flex-direction: column;
 `;
 
 const SpanTop = styled.div`
@@ -111,9 +109,9 @@ const SpanTop = styled.div`
     props.ani ? "rotate(45deg) translateX(6px) translateY(6px)" : ""};
   transition: all 0.5s ease-in-out;
 `;
+
 const SpanMid = styled.div`
   position: absolute;
-  top: 0;
   width: 100%;
   height: 2px;
   background-color: black;

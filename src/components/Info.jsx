@@ -1,19 +1,30 @@
 import styled from "styled-components";
 import { device } from "../device";
+import { FaFacebook, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const Container = styled.div`
   width: 100%;
   display: flex;
   color: white;
-  padding: 5% 10%;
+  padding: 10% 10%;
+  overflow: hidden;
   @media ${device.tablet} {
     flex-direction: column;
+    padding: 30% 10%;
+  }
+  @media ${device.mobileM} {
+    padding: 13% 10%;
   }
 `;
 const Left = styled.div`
   width: 49.9%;
   @media ${device.tablet} {
     width: 100%;
+    font-size: 18px;
+  }
+
+  @media ${device.mobileM} {
+    font-size: 15px;
   }
 `;
 const Title = styled.div`
@@ -75,6 +86,32 @@ const Img = styled.img`
   object-fit: cover;
 `;
 
+const IconContainer = styled.div`
+  @media ${device.tablet} {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+`;
+
+const Icon = styled.div`
+  color: white;
+  font-size: 32px;
+  cursor: pointer;
+  margin-bottom: 10px;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    transform: translateY(-5px);
+    color: lightgrey;
+  }
+
+  @media ${device.tablet} {
+    margin: 0;
+  }
+`;
+
 function Info() {
   return (
     <Container>
@@ -104,6 +141,17 @@ function Info() {
           <Img src="https://i.imgur.com/As1PcHa.jpg" alt="Me Pic" />
         </Card3>
       </Right>
+      <IconContainer>
+        <Icon>
+          <FaFacebook />
+        </Icon>
+        <Icon>
+          <FaLinkedinIn />
+        </Icon>
+        <Icon>
+          <FaInstagram />
+        </Icon>
+      </IconContainer>
     </Container>
   );
 }

@@ -27,6 +27,10 @@ const TextUp = styled.h2`
   @media ${device.tablet} {
     font-size: 24px;
   }
+  @media ${device.mobileM} {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
 `;
 const TextMid = styled.h2`
   font-weight: 400;
@@ -34,6 +38,9 @@ const TextMid = styled.h2`
   @media ${device.tablet} {
     font-size: 24px;
     margin-bottom: 10px;
+  }
+  @media ${device.mobileM} {
+    font-size: 20px;
   }
 `;
 const TextBold = styled.span`
@@ -43,11 +50,17 @@ const TextBold = styled.span`
   @media ${device.tablet} {
     font-size: 24px;
   }
+  @media ${device.mobileM} {
+    font-size: 20px;
+  }
 `;
 const TextBot = styled.span`
   font-size: 22px;
   @media ${device.tablet} {
     font-size: 16px;
+  }
+  @media ${device.mobileM} {
+    font-size: 14px;
   }
 `;
 
@@ -73,6 +86,11 @@ const Button = styled.button`
     border: 2px black solid;
     color: black;
     background-color: white;
+  }
+
+  @media ${device.mobileM} {
+    padding: 8px;
+    font-size: 14px;
   }
 `;
 
