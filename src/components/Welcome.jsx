@@ -31,6 +31,9 @@ const TextUp = styled.h2`
     font-size: 20px;
     margin-bottom: 0;
   }
+  @media ${device.laptopL} {
+    font-size: 36px;
+  }
 `;
 const TextMid = styled.h2`
   font-weight: 400;
@@ -41,6 +44,9 @@ const TextMid = styled.h2`
   }
   @media ${device.mobileM} {
     font-size: 20px;
+  }
+  @media ${device.laptopL} {
+    font-size: 36px;
   }
 `;
 const TextBold = styled.span`
@@ -53,14 +59,21 @@ const TextBold = styled.span`
   @media ${device.mobileM} {
     font-size: 20px;
   }
+  @media ${device.laptopL} {
+    font-size: 52px;
+  }
 `;
 const TextBot = styled.span`
   font-size: 22px;
+
   @media ${device.tablet} {
     font-size: 16px;
   }
   @media ${device.mobileM} {
     font-size: 14px;
+  }
+  @media ${device.laptopL} {
+    font-size: 26px;
   }
 `;
 
@@ -91,6 +104,10 @@ const Button = styled.button`
   @media ${device.mobileM} {
     padding: 8px;
     font-size: 14px;
+  }
+  @media ${device.laptopL} {
+    margin-top: 10px;
+    font-size: 20px;
   }
 `;
 

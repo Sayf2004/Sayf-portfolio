@@ -26,6 +26,9 @@ const Left = styled.div`
   @media ${device.mobileM} {
     font-size: 15px;
   }
+  @media ${device.laptopL} {
+    font-size: 22px;
+  }
 `;
 const Title = styled.div`
   margin-bottom: 25px;
@@ -60,6 +63,10 @@ const Card1 = styled.div`
   width: 225px;
   height: 300px;
   background-color: #a6d5ff;
+  @media ${device.laptopL} {
+    width: 300px;
+    height: 400px;
+  }
 `;
 
 const Card2 = styled.div`
@@ -70,6 +77,10 @@ const Card2 = styled.div`
   width: 225px;
   height: 300px;
   background-color: #8ac8ff;
+  @media ${device.laptopL} {
+    width: 300px;
+    height: 400px;
+  }
 `;
 const Card3 = styled.div`
   position: absolute;
@@ -78,6 +89,10 @@ const Card3 = styled.div`
   z-index: 2;
   width: 225px;
   height: 300px;
+  @media ${device.laptopL} {
+    width: 300px;
+    height: 400px;
+  }
 `;
 
 const Img = styled.img`
@@ -109,6 +124,10 @@ const Icon = styled.div`
 
   @media ${device.tablet} {
     margin: 0;
+  }
+
+  @media ${device.laptopL} {
+    font-size: 42px;
   }
 `;
 

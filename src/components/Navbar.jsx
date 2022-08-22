@@ -25,13 +25,16 @@ const Gray = styled.div`
 `;
 
 const LogoContainer = styled.div`
-  width: 30%;
+  padding: 0 10%;
   display: flex;
   justify-content: center;
   @media ${device.tablet} {
     justify-content: start;
     padding-left: 10%;
     width: 60%;
+  }
+  @media ${device.laptopL} {
+    font-size: 24px;
   }
 `;
 
@@ -43,6 +46,7 @@ const Links = styled.div`
   gap: 60px;
   width: 40%;
   transition: left 0.5s ease-in-out;
+
   @media ${device.tablet} {
     position: absolute;
     align-items: center;
@@ -57,6 +61,7 @@ const Links = styled.div`
     z-index: 1;
     left: ${(props) => (props.slide ? "70%" : "100%")};
   }
+
   @media ${device.mobileL} {
     padding-top: 50%;
     width: 40%;
@@ -70,6 +75,9 @@ const Par = styled.span`
   cursor: pointer;
   @media ${device.tablet} {
     font-size: 20px;
+  }
+  @media ${device.laptopL} {
+    font-size: 22px;
   }
 `;
 
@@ -155,7 +163,9 @@ function Navbar() {
         <Link spy={true} smooth={true} to="about">
           <Par onClick={handleClick}>About</Par>
         </Link>
-        <Par>Work</Par>
+        <Link spy={true} smooth={true} to="work">
+          <Par onClick={handleClick}>Work</Par>
+        </Link>
         <Par>Contact</Par>
       </Links>
     </Container>
